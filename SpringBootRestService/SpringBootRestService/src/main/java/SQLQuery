@@ -1,0 +1,23 @@
+CREATE DATABASE APIDevelopSpringBoot;
+use APIDevelopSpringBoot;
+
+CREATE TABLE Storage2(book_name varchar(50),id varchar(50),
+isbn varchar(50),
+aisle int,
+author varchar(50),PRIMARY KEY (id));
+
+INSERT INTO Storage2(book_name,id,isbn,aisle,author) values("Appium","fdsefr343","fdsefr3","43","Rahul Shetty");
+select * from Storage2 where id = 'fdsefr343' 
+
+Install Enterprise java developer
+Spring tools suite plugin from eclipse marketplace 
+search spring initializr in chrome to install maven/gradle project 
+Java Persistence API is used to communicate with database and return response 
+Important Features of Spring Boot 
+Loose Coupling 
+Auto configuration of jars
+Inbuilt server 
+spring boot starter security
+
+Mockito Framework- Mock all external dependencies that are needed for ur class 
+ 
