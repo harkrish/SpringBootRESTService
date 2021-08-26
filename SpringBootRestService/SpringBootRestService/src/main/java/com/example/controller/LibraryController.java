@@ -83,7 +83,7 @@ public class LibraryController {
 		Library existingId = repository.findById(id).get(); 
 		System.out.println(existingId.getIsbn());
 		
-		if(Objects.nonNull(lib.getAisle()) && "".equalsIgnoreCase(lib.getAisle()) ) {	   
+		if(Objects.nonNull(lib.getAisle()) && !"".equalsIgnoreCase(lib.getAisle()) ) {	//Not null and Not blank   
 		    existingId.setAisle(lib.getAisle()); 
 		}
 		
