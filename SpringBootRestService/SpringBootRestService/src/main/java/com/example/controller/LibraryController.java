@@ -82,7 +82,11 @@ public class LibraryController {
 	public ResponseEntity<Library> updateBookById(@PathVariable(value="id") String id,@RequestBody Library lib) {
 		Library existingId = repository.findById(id).get(); 
 		System.out.println(existingId.getIsbn());
-		existingId.setAisle(lib.getAisle()); 
+		
+		if(Objects.nonNull(lib.getAisle()) && "".equalsIgnoreCase(lib.getAisle()) ) {	   
+		    existingId.setAisle(lib.getAisle()); 
+		}
+		
 		existingId.setAuthor(lib.getAuthor());
 		existingId.setBook_name(lib.getBook_name());  
 		repository.save(existingId); 
